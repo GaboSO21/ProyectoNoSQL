@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const peliSchema = mongoose.Schema({
 
     genero: {
@@ -18,13 +17,22 @@ const peliSchema = mongoose.Schema({
     criticas: {
         type: [mongoose.Schema.Types.ObjectId],
     },
-
+    premios: {
+        type: [mongoose.Schema.Types.ObjectId]
+    },
+    director_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: [true, 'El director es obligatorio']
+    },
+    rating: {
+        type: mongoose.Schema.Types.ObjectId,
+    }
 
 });
 
 peliSchema.methods.toJSON = function() {
 
-    const { peli } = this.toObject();
+    const { __v, ...peli } = this.toObject();
     return peli;
 
 }
