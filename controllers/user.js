@@ -2,7 +2,6 @@ const { response, request } = require('express');
 const bcryptjs = require('bcryptjs');
 
 const Usuario = require('../models/usuario');
-const { validationResult } = require('express-validator');
 
 // Controladores: encargados de resolver las peticions http y retornar o 
 // asignar datos dependiendo del caso

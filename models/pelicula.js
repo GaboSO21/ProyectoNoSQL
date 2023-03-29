@@ -20,9 +20,8 @@ const peliSchema = mongoose.Schema({
     premios: {
         type: [mongoose.Schema.Types.ObjectId]
     },
-    director_id: {
+    director: {
         type: mongoose.Schema.Types.ObjectId,
-        required: [true, 'El director es obligatorio']
     },
     rating: {
         type: mongoose.Schema.Types.ObjectId,
