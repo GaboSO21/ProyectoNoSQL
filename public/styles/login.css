@@ -9,6 +9,7 @@ body{
 .container{
     display: flex;
     flex-direction: row;
+    height: 100vh;
 }
 
 .login-data{
@@ -17,6 +18,8 @@ body{
     font-family: 'Roboto', sans-serif;
     width: 60%;
     text-align: center;
+    padding-top: 10vh;
+    height: 100vh;
 }
 
 
