@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             titulo.innerHTML = pelicula.titulo;
             genero.innerHTML = pelicula.genero;
-            directorNombre.innerHTML = director.nombre;
+            directorNombre.innerHTML = `Director: ${director.nombre} ${director.primApellido} ${director.segApellido}`;
 
             peliContainer.append(divContainer);
 

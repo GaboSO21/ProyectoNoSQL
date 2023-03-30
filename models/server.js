@@ -21,6 +21,7 @@ class Server {
         this.criticaPath = '/api/critica';
         this.mediaPath = '/api/media';
         this.cinePath = '/api/cine';
+        this.loginPath = '/api/auth';
 
         // Rutas vistas
         this.viewPath = '/view';
@@ -65,6 +66,7 @@ class Server {
         this.app.use(this.ratingPath, require('../routes/rating'));
         this.app.use(this.usersPath, require('../routes/user'));
         this.app.use(this.viewPath, require('../routes/views'));
+        this.app.use(this.loginPath, require('../routes/auth'));
 
     }
 

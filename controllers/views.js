@@ -5,12 +5,19 @@ const { response, request } = require('express');
 
 const testGet = async (req = request, res = response) => {
 
-    res.sendFile('/home/gabo-arch/Documents/Universidad/Cuatri_4/ProyectoNoSQL/public/views/test.html');
+    res.sendFile(process.env.DIRPATH + "test.html");
+
+}
+
+const login = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "login.html");
 
 }
 
 module.exports = {
     testGet,
+    login
 }
 
 

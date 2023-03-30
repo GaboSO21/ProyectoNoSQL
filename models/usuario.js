@@ -4,11 +4,9 @@ const usuarioSchema = mongoose.Schema({
 
     nombre: {
         type: String,
-        required: [true, 'El nombre es obligatorio']
     },
     primApellido: {
         type: String,
-        required: [true, 'El primer apellido es obilgatorio']
     },
     segApellido: {
         type: String,
@@ -16,7 +14,6 @@ const usuarioSchema = mongoose.Schema({
     },
     cedula: {
         type: String,
-        required: [true, 'La cedula es obligatoria']
     },
     correo: {
         type: String,
@@ -41,7 +38,8 @@ const usuarioSchema = mongoose.Schema({
 
 usuarioSchema.methods.toJSON = function() {
 
-    const { __v, password, ...user } = this.toObject();
+    const { __v, password, _id, ...user } = this.toObject();
+    user.uid = _id;
     return user;
 
 }
