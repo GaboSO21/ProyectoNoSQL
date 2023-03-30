@@ -16,7 +16,7 @@ body{
     background: rgb(242,29,68);
     background: linear-gradient(180deg, rgba(242,29,68,0.9332107843137255) 32%, rgba(235,177,187,1) 98%, rgba(232,226,226,1) 100%);
     font-family: 'Roboto', sans-serif;
-    width: 60%;
+    width: 61%;
     text-align: center;
     padding-top: 10vh;
     height: 100vh;
@@ -92,7 +92,7 @@ a{
 
 
 .posters-img{
-    width: 40%;
+    width: 39%;
     border-left: 1px solid #F6F1F1;
 }
 
