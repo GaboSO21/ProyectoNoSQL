@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <form method="post">
+      <h1>Login</h1>
+      <label for="correo">Correo: </label>
+      <input
+        class="correo"
+        type="email"
+        name="correo"
+        placeholder="Enter a username"
+      />
 
-        <label for="correo">Correo: </label>
-        <input class="correo" type="email" name="correo" placeholder="Enter a username">
+      <label for="password">Password: </label>
+      <input
+        class="password"
+        type="password"
+        name="password"
+        placeholder="Enter a password"
+      />
 
-        <label for="password">Password: </label>
-        <input class="password" type="password" name="password" placeholder="Enter a password">
-
-        <button type="submit">Login</button>
-
+      <button type="submit">Login</button>
     </form>
 
     <script src="../src/login.js"></script>
-
-</body>
-
+  </body>
 </html>
