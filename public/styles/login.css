@@ -64,6 +64,12 @@ input{
     font-weight: 900;
 }
 
+::placeholder{
+    padding-left: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+}
+
 
 
 
