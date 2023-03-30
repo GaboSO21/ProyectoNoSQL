@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.login-data{
+    background: rgb(242,29,68);
+    background: linear-gradient(180deg, rgba(242,29,68,0.9332107843137255) 32%, rgba(235,177,187,1) 98%, rgba(232,226,226,1) 100%);
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    text-align: center;
+}
+
+
+
+
+.logo-img{
+    height: 150px;
+    margin-top: 3%;
+}
+
+
+
+
+
+.data-h3{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.form-container{
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+input{
+    height: 40px;
+    width: 300px;
+}
+
+.input-info{
+    margin: 4% 2%;
+    border-radius: 5px;
+    border: 1px solid #F6F1F1;
+}
+
+.input-submit{
+    margin: 12% 2% 0%;
+    height: 50px;
+    width: 310px;
+    background-color: rgb(242,29,68);
+    border-radius: 5px;
+    border: none;
+    font-weight: 900;
+}
+
+
+
+
+.register-txt{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(185, 28, 57);
+    text-decoration:underline;
+}
+
+
+
+
+.posters-img{
+    width: 40%;
+    border-left: 1px solid #F6F1F1;
+}
+
+.posters{
+    width: 100%;
+}
+
