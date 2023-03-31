@@ -12,7 +12,6 @@ const fetchData = async (formData) => {
                 nombre: formData.get('nombre'),
                 correo: formData.get('correo'),
                 password: formData.get('password'),
-                rol: "USER_ROLE",
                 estado: true,
             }),
         })
