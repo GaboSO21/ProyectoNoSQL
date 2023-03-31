@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Login</title>
+  <title>Register</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles/login.css" />
@@ -18,15 +18,17 @@
 
         <div class="form-container">
           <form class="form-login" method="post">
+            <input class="input-info" type="nombre" placeholder="Name" name="nombre" />
+            <br />
             <input class="input-info" type="email" placeholder="Email address" name="email" />
             <br />
             <input class="input-info" type="password" placeholder="Password" name="password" id="" />
             <br />
-            <input class="input-submit" type="submit" value="LOGIN" />
+            <input class="input-submit" type="submit" value="REGISTER" />
           </form>
         </div>
         <p class="register-txt">
-          Don't have an account? <a href="/view/register">Register here</a>
+          Already have an account? <a href="/view/login">Login here</a>
         </p>
       </div>
     </div>
@@ -35,7 +37,7 @@
     </div>
   </div>
 
-  <script src="../src/login.js"></script>
+  <script src="../src/register.js"></script>
 </body>
 
 </html>

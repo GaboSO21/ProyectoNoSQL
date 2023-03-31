@@ -15,9 +15,16 @@ const login = async (req, res = response) => {
 
 }
 
+const register = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "register.html");
+
+}
+
 module.exports = {
     testGet,
-    login
+    login,
+    register,
 }
 
 

@@ -29,14 +29,42 @@ const usersGet = async (req = request, res = response) => {
 const usersPost = async (req = request, res = response) => {
 
     // Desestructurar campos de peticion http 
-    const { nombre, correo, password, rol } = req.body;
+    const { nombre, correo, password } = req.body;
 
     // Creacion de modelo Usuario para la bd
     const usuario = new Usuario({
         nombre,
         correo,
         password,
-        rol
+        rol: "USER_ROLE"
+    });
+
+    // Encriptar psswd
+    const salt = bcryptjs.genSaltSync();
+    usuario.password = bcryptjs.hashSync(password, salt);
+
+    // Guardar en db
+    await usuario.save();
+
+    // Retornar un mensaje junto a usuario que fue salvado
+    res.json({
+        usuario
+    });
+
+}
+
+// Peticion POST, ingresa nuevo usuario a la coleccion
+const usersPostAdmin = async (req = request, res = response) => {
+
+    // Desestructurar campos de peticion http 
+    const { nombre, correo, password } = req.body;
+
+    // Creacion de modelo Usuario para la bd
+    const usuario = new Usuario({
+        nombre,
+        correo,
+        password,
+        rol: "ADMIN_ROLE"
     });
 
     // Encriptar psswd
@@ -96,12 +124,6 @@ module.exports = {
     usersGet,
     usersPost,
     usersPut,
-    usersDelete
+    usersDelete,
+    usersPostAdmin
 }
-
-
-
-
-
-
-
