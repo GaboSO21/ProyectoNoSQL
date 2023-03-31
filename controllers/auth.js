@@ -57,6 +57,17 @@ const login = async (req, res = response) => {
 
 }
 
+const validatedToken = (req, res = response) => {
+
+    return res.status(200).json({
+
+        msg: 'Valid token'
+
+    })
+
+}
+
 module.exports = {
-    login
+    login,
+    validatedToken
 }

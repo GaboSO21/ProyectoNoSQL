@@ -1,7 +1,8 @@
 const express = require('express');
 const { check } = require('express-validator');
-const { login } = require('../controllers/auth');
+const { login, validatedToken } = require('../controllers/auth');
 const { validarCampos } = require('../middlewares/validar-campos');
+const { validarJWT } = require('../middlewares/validar-jwt');
 
 // Rutas: resuelven las rutas usadas para las peticiones http
 
@@ -12,5 +13,9 @@ router.post('/login', [
     check('password', 'La password es obligatoria').not().isEmpty(),
     validarCampos
 ], login);
+
+router.post('/token', [
+    validarJWT,
+], validatedToken)
 
 module.exports = router;
