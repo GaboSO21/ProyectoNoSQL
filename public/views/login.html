@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
 
-<head>
-  <title>Login</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../styles/login.css" />
-</head>
+  <body>
+    <div class="container">
+      <div class="login-data">
+        <div class="data">
+          <img class="logo-img" src="../imgs/logo2.png.png" alt="" />
 
-<body>
-  <div class="container">
-    <div class="login-data">
-      <div class="data">
-        <img class="logo-img" src="../imgs/logo2.png.png" alt="" />
+          <h3 class="data-h3">Welcome Back!</h3>
 
-        <h3 class="data-h3">Welcome Back!</h3>
-
-        <div class="form-container">
-          <form class="form-login" method="post">
-            <input class="input-info" type="email" placeholder="Email address" name="email" />
-            <br />
-            <input class="input-info" type="password" placeholder="Password" name="password" id="" />
-            <br />
-            <input class="input-submit" type="submit" value="LOGIN" />
-          </form>
+          <div class="form-container">
+            <form class="form-login" method="post">
+              <input
+                class="input-info"
+                type="email"
+                placeholder="Email address"
+                name="email"
+              />
+              <br />
+              <input
+                class="input-info"
+                type="password"
+                placeholder="Password"
+                name="password"
+                id=""
+              />
+              <br />
+              <input class="input-submit" type="submit" value="LOGIN" />
+            </form>
+          </div>
+          <p class="register-txt">
+            Don't have an account? <a href="/view/register">Register here</a>
+          </p>
         </div>
-        <p class="register-txt">
-          Don't have an account? <a href="/view/register">Register here</a>
-        </p>
+      </div>
+      <div class="posters-img">
+        <img class="posters" src="../imgs/Posters.png" alt="" />
       </div>
     </div>
-    <div class="posters-img">
-      <img class="posters" src="../imgs/Posters.png" alt="" />
-    </div>
-  </div>
 
-  <script src="../src/login.js"></script>
-</body>
-
+    <script src="../src/login.js"></script>
+  </body>
 </html>
