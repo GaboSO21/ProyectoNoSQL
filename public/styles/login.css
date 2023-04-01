@@ -54,7 +54,8 @@ input{
 .input-info{
     margin: 4% 2%;
     border-radius: 5px;
-    border: 1px solid #F6F1F1;
+    padding-left: 13px;
+    border: 1px solid #1b1919c2;
 }
 
 .input-submit{
@@ -67,8 +68,13 @@ input{
     font-weight: 900;
 }
 
+input:focus::placeholder{
+    color: black;
+    font-weight: 700;
+}
+
+
 ::placeholder{
-    padding-left: 13px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
 }
