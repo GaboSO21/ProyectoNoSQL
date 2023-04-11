@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #F6F1F1;
+}
+
+/*NAV*/
+.nav{
+    background-color: rgb(242,29,68);
+    padding: 1px 10% 1px 8%;
+}
+
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1% auto;
+}
+
+.nav-li-i{
+    margin-top: 1%;
+}
+
+.logo-img2{
+    height: 70px;
+}
+
+.nav-a{
+    text-decoration: none;
+    color: #191919;
+    font-family: 'Ubuntu' ,sans-serif;
+}
+
+.nav-a-i{
+    text-decoration: none;
+    color: #191919;
+    margin-top: 200%;
+}
+
+
+
+
+
+
