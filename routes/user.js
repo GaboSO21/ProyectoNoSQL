@@ -10,9 +10,10 @@ const { esAdminRole } = require('../middlewares/validar-rol');
 
 const router = express.Router();
 
-router.get('/', usersGet);
+router.get('/', validarJWT, usersGet);
 
 router.put('/:id', [
+    validarJWT,
     check('id', 'No es un ID valido').isMongoId(),
     check('id').custom(existeUsuarioID),
     check('rol').custom(esRolValido),
@@ -39,6 +40,7 @@ router.post('/admin', [
 ], usersPostAdmin)
 
 router.delete('/:id', [
+    validarJWT,
     check('id', 'No es un ID valido').isMongoId(),
     check('id').custom(existeUsuarioID),
     validarCampos

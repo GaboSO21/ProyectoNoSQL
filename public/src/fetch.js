@@ -1,6 +1,10 @@
 const fetchData = async () => {
 
-    const response = await fetch('/api/pelicula');
+    const response = await fetch('/api/pelicula', {
+        headers: {
+            'x-token': localStorage('token'),
+        }
+    });
 
     return response.json();
 
@@ -111,16 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMovies();
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-

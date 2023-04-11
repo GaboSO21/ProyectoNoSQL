@@ -4,19 +4,25 @@ const { peliculaGet, peliculaPost, peliculaPut, peliculaDelete } = require('../c
 const { existePeliculaID, existeCriticaID, existePremioID, existeDirectorID, existeRatingID } = require('../helpers/db-validators');
 
 const { validarCampos } = require('../middlewares/validar-campos');
+const { validarJWT } = require('../middlewares/validar-jwt');
+const { esAdminRole } = require('../middlewares/validar-rol');
 
 // Rutas: resuelven las rutas usadas para las peticiones http
 const router = express.Router();
 
-router.get('/', peliculaGet);
+router.get('/', validarJWT, peliculaGet);
 
 router.put('/:id', [
+    validarJWT,
+    esAdminRole,
     check('id', 'No es un ID valido').isMongoId(),
     check('id').custom(existePeliculaID),
     validarCampos
 ], peliculaPut);
 
 router.post('/', [
+    validarJWT,
+    esAdminRole,
     check('genero', 'El genero es obligatorio').notEmpty(),
     check('titulo', 'El titulo es obligatorio').notEmpty(),
     check('fecha', 'La fecha es obligatoria').isDate().notEmpty(),
@@ -32,6 +38,8 @@ router.post('/', [
 ], peliculaPost);
 
 router.delete('/:id', [
+    validarJWT,
+    esAdminRole,
     check('id', 'No es un ID valido').isMongoId(),
     check('id').custom(existePeliculaID),
     validarCampos
