@@ -1,4 +1,4 @@
-const form = document.querySelector(".form-login");
+const form = document.querySelector("form");
 
 const fetchData = async (formData) => {
 
@@ -36,7 +36,7 @@ const formSubmit = async (e) => {
     )
     formData.append(
         'nombre',
-        document.querySelector('input[name="nombre"]').value
+        document.querySelector('input[name="name"]').value
     )
 
     const data = await fetchData(formData);
