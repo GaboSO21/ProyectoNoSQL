@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { testGet, login, register, movies } = require('../controllers/views');
+const { testGet, login, register, movies, awards, directors } = require('../controllers/views');
 
 // Rutas: resuelven las rutas usadas para las peticiones http
 
@@ -12,6 +12,10 @@ router.get('/login', [], login);
 
 router.get('/register', [], register);
 
+router.get('/director', [], directors);
+
 router.get('/movies', [], movies);
+
+router.get('/awards', [], awards);
 
 module.exports = router;
