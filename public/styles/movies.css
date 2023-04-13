@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #F6F1F1;
+}
+
+
+.nav{
+    background-color: rgb(242,29,68);
+    padding: 1px 10% 1px 8%;
+}
+
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1% auto;
+}
+
+
+
+.nav-li-i{
+    margin-top: 1%;
+}
+
+.logo-img2{
+    height: 70px;
+}
+
+.nav-a{
+    text-decoration: none;
+    color: #191919;
+    font-family: 'Ubuntu' ,sans-serif;
+}
+
+.nav-a-i{
+    text-decoration: none;
+    color: #191919;
+    margin-top: 200%;
+}
+
+
+.container{
+    background-color: rgb(242,29,68);
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    margin-left: 2%;
+    justify-content: space-between;
+    min-width: 50%;
+    max-width: 50%;
+    border-radius: 20px;
+}
+
+
+
+h4{
+    font-family: 'ubuntu' , sans-serif;
+    font-size: 1.5rem;
+}
+
+.main-info{
+    text-align: center;
+    padding: 5%;
+    padding-bottom: 3%;
+    background-color: #121212;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+.posters{
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid #F6F1F1;
+}
+
+
+.sec-info{
+    text-align: center;
+    padding: 8%;
+    padding-bottom: 3%;
+    padding-right: 8%;
+    font-family: 'Ubuntu' , sans-serif;
+    font-weight: 700;
+    background-color: rgb(242,29,68);;
+}
+
+.desc{
+    font-family: 'Roboto' , sans-serif;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.more-icon{
+    padding: 2% 2% 0 0;
+    background-color: rgb(242,29,68);
+    border-radius: 20px;
+}
+
+.icon-link{
+    color: #121212;
+}
+
+
+
+
+/* Modal*/
+
+h5{
+    font-family: 'ubuntu' , sans-serif;
+    font-size: 1.2rem;
+    margin-top: -2%;
+}
+h6{
+    font-family: 'ubuntu' , sans-serif;
+    font-size: 1rem;
+    margin-top: -0.5%;
+}
+
+hr{
+    margin-bottom: 4%;
+    height: 7px;
+    background-color: rgb(242,29,68);
+    border-color: #fefefe;
+    border-radius: 30px;
+}
+ 
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 20px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
