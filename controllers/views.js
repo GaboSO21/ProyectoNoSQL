@@ -39,6 +39,12 @@ const awards = async (req, res = response) => {
 
 }
 
+const medias = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "medias.html");
+
+}
+
 module.exports = {
     testGet,
     login,
@@ -46,6 +52,7 @@ module.exports = {
     directors,
     movies,
     awards,
+    medias,
 }
 
 
