@@ -18,6 +18,6 @@ router.get('/movies', [], movies);
 
 router.get('/awards', [], awards);
 
-router.get('medias', [], medias);
+router.get('/medias', [], medias);
 
 module.exports = router;
