@@ -64,17 +64,21 @@ body{
     position: absolute;
     width: auto;
     padding: 16px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
+    top: 50%;
     user-select: none;
   }
   
   /* Position the "next button" to the right */
+  .prev{
+    left: 20%;
+  }
   .next {
-    right: 0;
+    right: 20%;
     border-radius: 3px 0 0 3px;
   }
   
@@ -160,4 +164,8 @@ body{
     border-radius: 7px;
     margin:3% 0 4%;
 }
+
+
+
+
 

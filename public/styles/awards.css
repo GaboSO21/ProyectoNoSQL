@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #F6F1F1;
+}
+
+/*NAV*/
+.nav{
+    background-color: rgb(242,29,68);
+    padding: 1px 10% 1px 8%;
+}
+
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1% auto;
+}
+
+.nav-li-i{
+    margin-top: 1%;
+}
+
+.logo-img2{
+    height: 70px;
+}
+
+.nav-a{
+    text-decoration: none;
+    color: #191919;
+    font-family: 'Ubuntu' ,sans-serif;
+}
+
+.nav-a-i{
+    text-decoration: none;
+    color: #191919;
+    margin-top: 200%;
+}
+
+
+/* Card */
+
+.container{
+    background-color: #191919;
+    display: flex;
+    width: 30%;
+    padding: 3%;
+    margin: 4% auto;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .3s ease;
+}
+
+.info{
+    font-family: 'Montserrat', sans-serif;
+    color: #F6F1F1;
+    font-size: 25px;
+    padding: 5%;
+    text-align: center;
+}
+
+.trophy-img{
+    height: 300px;
+    position: absolute;
+    right: 35%;
+    top: 23%;
+    transition: .3s ease;
+    opacity: 0;
+}
+
+.container:hover{
+    transform: 
+        perspective(250px)
+        rotatex(7deg)
+        translateY(-5%)
+        translateZ(0);
+    
+}
+
+.container:hover .trophy-img{
+    opacity: 1;
+    position: absolute;
+    right: 13%;
+    top: 23%;
+    background-color: rgb(242,29,68);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5)50%
+        rgba(0,0,0)95%
+        );
+}
