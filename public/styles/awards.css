@@ -73,7 +73,7 @@ body{
     opacity: 0;
 }
 
-.container:hover{
+.container:hover,.trophy-img:hover{
     transform: 
         perspective(250px)
         rotatex(7deg)
