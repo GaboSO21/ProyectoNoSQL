@@ -11,7 +11,7 @@ const connectDB = async () => {
         useUnifiedTopology: true,
     })
         .then(() => console.log('Conexion exitosa'))
-        .catch(err => console.log(err, '\nError iniciando conexion'));
+        .catch(err => console.log(err, 'Error iniciando conexion'));
 
 }
 

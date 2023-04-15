@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #F6F1F1;
+}
+
+/*NAV*/
+.nav{
+    background-color: rgb(242,29,68);
+    padding: 1px 10% 1px 8%;
+}
+
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1% auto;
+}
+
+.nav-li-i{
+    margin-top: 1%;
+}
+
+.logo-img2{
+    height: 70px;
+}
+
+.nav-a{
+    text-decoration: none;
+    color: #191919;
+    font-family: 'Ubuntu' ,sans-serif;
+}
+
+.nav-a-i{
+    text-decoration: none;
+    color: #191919;
+    margin-top: 200%;
+}
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30%;
+    border-radius: 30px;
+    width: 80%;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    top: 50%;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .prev{
+    left: 20%;
+  }
+  .next {
+    right: 20%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 40%;
+    left: 30%;
+    text-align: center;
+    background-color: #191919;
+    border-radius: 15px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 0 auto;
+
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+.info{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.main-info{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: left;
+}
+
+.lastname{
+    display: flex;
+
+}
+.dir-img{
+    height: 200px;
+    border-radius: 7px;
+    margin:3% 0 4%;
+}
+
+
+
+
+

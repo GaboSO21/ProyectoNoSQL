@@ -21,10 +21,38 @@ const register = async (req, res = response) => {
 
 }
 
+const movies = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "movies.html");
+
+}
+
+const directors = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "director.html");
+
+}
+
+const awards = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "awards.html");
+
+}
+
+const medias = async (req, res = response) => {
+
+    res.sendFile(process.env.DIRPATH + "medias.html");
+
+}
+
 module.exports = {
     testGet,
     login,
     register,
+    directors,
+    movies,
+    awards,
+    medias,
 }
 
 

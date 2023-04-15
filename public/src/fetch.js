@@ -2,9 +2,18 @@ const fetchData = async () => {
 
     const response = await fetch('/api/pelicula', {
         headers: {
-            'x-token': localStorage('token'),
+            'x-token': localStorage.getItem('token'),
         }
-    });
+    })
+        .then(res => {
+
+            if (res.status === 401) {
+
+                window.location = '/view/login'
+
+            }
+
+        })
 
     return response.json();
 
