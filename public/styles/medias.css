@@ -40,3 +40,10 @@ body{
     color: #191919;
     margin-top: 200%;
 }
+
+
+/* Grid */
+.parent {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
