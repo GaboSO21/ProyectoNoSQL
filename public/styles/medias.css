@@ -46,4 +46,33 @@ body{
 .parent {
     display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 3%;
+}
+
+.container{
+    background-color: #191919;
+    color: #F6F1F1;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 5%;
+    padding-top: 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.name{
+    font-size: 25px;
+}
+
+.url{
+    font-size: 15px;
+    font-style: italic;
+}
+
+i{
+    margin: 5% 5% 0 0;
 }
