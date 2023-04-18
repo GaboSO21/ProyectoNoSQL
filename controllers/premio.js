@@ -7,12 +7,12 @@ const Premio = require('../models/premio');
 
 const premioGet = async (req = request, res = response) => {
 
-    const { limite = 5, desde = 0, nombre } = req.query;
+    const { limite = 5, desde = 0, id } = req.query;
 
-    if (nombre) {
+    if (id) {
 
         const premio = await Premio.findOne({
-            nombre
+            _id: id
         });
 
         return res.json({

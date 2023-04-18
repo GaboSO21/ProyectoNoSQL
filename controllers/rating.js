@@ -7,12 +7,12 @@ const Rating = require('../models/rating');
 
 const ratingGet = async (req = request, res = response) => {
 
-    const { limite = 5, desde = 0, nombre } = req.query;
+    const { limite = 5, desde = 0, id } = req.query;
 
-    if (nombre) {
+    if (id) {
 
         const rating = await Rating.findOne({
-            nombre
+            _id: id
         });
 
         return res.json({

@@ -2,11 +2,34 @@
 
 body{
     margin: 0;
-    height: 100vh;
-    background-color: #F6F1F1;
+    background-color: #5c2929;
+}
+
+.bg{
+  background-image:url(../imgs/backgroundMedias.png);
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    background-attachment: fixed;
+    background-position: inherit;
+    background-repeat: repeat;
+    background-size:contain;
+}
+
+.transbox{
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
 }
 
 /*NAV*/
+
+.content{
+  opacity: 1 !important;
+  z-index: 1;
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  position: relative;
+}
 .nav{
     background-color: rgb(242,29,68);
     padding: 1px 10% 1px 8%;

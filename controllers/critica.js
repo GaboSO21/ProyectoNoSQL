@@ -7,12 +7,12 @@ const Critica = require('../models/critica');
 
 const criticaGet = async (req = request, res = response) => {
 
-    const { limite = 5, desde = 0, jornalista } = req.query;
+    const { limite = 5, desde = 0, id } = req.query;
 
-    if (jornalista) {
+    if (id) {
 
         const critica = await Critica.findOne({
-            jornalista
+            _id: id
         });
 
         return res.json({
