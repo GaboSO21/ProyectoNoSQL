@@ -1,6 +1,8 @@
 const fetchData = async () => {
 
-    const response = await fetch('/api/pelicula', {
+    let response = '';
+
+    await fetch('/api/pelicula', {
         headers: {
             'x-token': localStorage.getItem('token'),
         }
@@ -13,9 +15,11 @@ const fetchData = async () => {
 
             }
 
-        })
+            response = res.json();
 
-    return response.json();
+        });
+
+    return response;
 
 }
 
@@ -23,7 +27,14 @@ const fetchDirector = async (directorID) => {
 
     const response = await fetch('/api/director?' + new URLSearchParams({
         id: directorID,
-    }).toString());
+    }
+    ),
+        {
+            headers: {
+                'x-token': localStorage.getItem('token'),
+            }
+        }
+    );
 
     return response.json();
 
@@ -48,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const mainInfoContainer = document.createElement('div');
             const descContainer = document.createElement('div');
             const iconContainer = document.createElement('div');
+            const img = document.createElement('img');
             const titulo = document.createElement('h4');
             const genero = document.createElement('p');
             const directorNombre = document.createElement('p');
@@ -73,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             divContainer.className = 'container';
             mainInfoContainer.className = 'main-info';
+            img.className = 'poster';
             secInfoContainer.className = 'sec-info';
             descContainer.className = 'desc';
             iconContainer.className = 'more-icon';
@@ -84,6 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             directorNombre.innerHTML = `${director.nombre} ${director.primApellido} ${director.segApellido}`;
             genero.innerHTML = pelicula.genero;
             titulo.innerHTML = pelicula.titulo;
+            img.src = `../imgs/${pelicula.img}.png`;
+            img.style.width = '200px';
+            img.style.height = '300px';
             desc.innerHTML = pelicula.desc;
 
             tituloModal.innerHTML = pelicula.titulo
@@ -100,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             divContainer.append(mainInfoContainer, secInfoContainer, iconContainer);
             iconContainer.append(anchor);
             anchor.append(icon);
-            mainInfoContainer.append(titulo);
+            mainInfoContainer.append(titulo, img);
             secInfoContainer.append(directorNombre, genero, descContainer);
             descContainer.append(desc);
 

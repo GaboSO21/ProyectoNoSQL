@@ -1,4 +1,5 @@
 const { response, request } = require('express');
+const path = require('path');
 
 const Pelicula = require('../models/pelicula');
 
@@ -41,7 +42,13 @@ const peliculaGet = async (req = request, res = response) => {
 const peliculaPost = async (req = request, res = response) => {
 
     // Desestructurar campos de peticion http 
-    const { genero, titulo, fecha, criticas, premios, director, rating } = req.body;
+    const { genero, titulo, fecha, criticas, premios, director, rating, img } = req.body;
+
+    // const peliImage = req.files.image;
+    //
+    // const imagePath = path.join(__dirname, '../public/imgs/' + `${peliImage.name}`);
+
+    // await peliImage.mv(imagePath);
 
     // Creacion de modelo Usuario para la bd
     const pelicula = new Pelicula({
@@ -51,7 +58,8 @@ const peliculaPost = async (req = request, res = response) => {
         criticas,
         premios,
         director,
-        rating
+        rating,
+        img
     });
 
     // Guardar en db

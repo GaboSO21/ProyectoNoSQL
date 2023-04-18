@@ -25,6 +25,9 @@ const peliSchema = mongoose.Schema({
     },
     rating: {
         type: mongoose.Schema.Types.ObjectId,
+    },
+    img: {
+        type: String,
     }
 
 });

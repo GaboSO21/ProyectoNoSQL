@@ -53,6 +53,9 @@ class Server {
         // Directorio public/static
         this.app.use(express.static('public'));
 
+        // File upload
+        // this.app.use(require('express-fileupload'));
+
     }
 
     routes() {

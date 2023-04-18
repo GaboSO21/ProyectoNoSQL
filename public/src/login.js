@@ -51,7 +51,7 @@ const formSubmit = async (e) => {
 
     if (data.token) {
         saveToken(data.token);
-        window.location = "/view/test";
+        window.location = "/";
     }
 
     console.log(data);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (localStorage.getItem('token')) {
 
-        window.location = "/view/test";
+        window.location = "/";
 
     }
 
